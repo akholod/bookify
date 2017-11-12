@@ -1,0 +1,23 @@
+{
+  "name": "bookify",
+  "version": "0.1.0",
+  "description": "book hub",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node dev.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-register": "^6.26.0",
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
+}
