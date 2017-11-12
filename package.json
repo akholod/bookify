@@ -4,9 +4,14 @@
   "description": "book hub",
   "main": "app.js",
   "scripts": {
-    "start": "rimraf ./dist && babel -d ./dist ./src -s",
+    "start": "rimraf ./dist && babel -d ./dist ./src -s && node ./dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon dev.js"
+    "dev": "nodemon dev.js",
+    "lint-staged": "lint-staged"
+  },
+  "pre-commit": "lint-staged",
+  "lint-staged": {
+    "*.js": "eslint"
   },
   "author": "",
   "license": "ISC",
@@ -15,7 +20,9 @@
     "eslint": "^4.11.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
-    "nodemon": "^1.12.1"
+    "lint-staged": "^5.0.0",
+    "nodemon": "^1.12.1",
+    "pre-commit": "^1.2.2"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
