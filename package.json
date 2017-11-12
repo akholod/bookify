@@ -6,7 +6,7 @@
   "scripts": {
     "start": "rimraf ./dist && babel -d ./dist ./src -s && node ./dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon dev.js",
+    "dev": "./node_modules/.bin/nodemon dev.js",
     "lint-staged": "lint-staged"
   },
   "pre-commit": "lint-staged",
