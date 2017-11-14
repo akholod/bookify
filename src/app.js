@@ -1,5 +1,14 @@
-import { get } from 'lodash';
+import Koa from 'koa';
+import bodyParser from 'koa-bodyparser';
+import logger from 'koa-logger';
+import { port } from 'config';
+import router from './routes';
 
-const a = 'check';
-console.log(a);
-console.log(get);
+const app = new Koa();
+
+app.use(bodyParser());
+app.use(logger());
+
+app.use(router.routes());
+
+app.listen(port);
