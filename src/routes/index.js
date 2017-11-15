@@ -2,8 +2,8 @@ import Router from 'koa-router';
 
 const router = new Router();
 
-router.get('/', (ctx) => {
-  ctx.body = 'main route';
+router.get('/', async (ctx) => {
+  await ctx.render('home');
 });
 
 router.get('/test', (ctx) => {
